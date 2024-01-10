@@ -1,0 +1,32 @@
+<mat-toolbar class="mat-elevation-z4">
+    <img (click)="changeDrawer()" src="../../../../assets/logo.png" alt="Logo Cheguei mamae">
+    <!-- <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>account_circle</mat-icon>
+      </button> -->
+  <!-- <span class="example-spacer"></span> -->
+  <button style="position: absolute; right: 5px;" mat-button [matMenuTriggerFor]="beforeMenu"><mat-icon class="menu" aria-hidden="false" aria-label="Example home icon" fontIcon="menu"></mat-icon></button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-menu-item>Roteiro</button>
+  <button mat-menu-item routerLink="students">Alunos</button>
+  <button mat-menu-item routerLink="schools">Escolas</button>
+  <button mat-menu-item (click)="logout()">Sair da conta</button>
+</mat-menu>
+
+</mat-toolbar>
+
+<!-- <div class="content">
+  <app-students *ngIf="component==='students'"></app-students>
+  <app-schools *ngIf="component==='schools'"></app-schools>
+  <app-financial *ngIf="component==='financial'"></app-financial>
+  <app-student-feedback *ngIf="component==='studentsfeedback'"></app-student-feedback>
+</div> -->
+
+
+<!-- <div class="icon-bar">
+  <a [ngClass]="{'active': activeUser}" (click)="openUser()"><i class="fa fa-user-o"></i></a> 
+  <a [ngClass]="{'active': activeBuscar}" (click)="openBuscar()"><i class="fa fa-search"></i></a> 
+  <a [ngClass]="{'active': activeRoteiro}" (click)="openRoteiro()"><i class="fa fa-car"></i></a> 
+  <a [ngClass]="{'active': activePagamento}" (click)="openPagamento()"><i class="fa fa-money"></i></a>
+  <a [ngClass]="{'active': activeSair}"><i (click)="logout()" class="fa fa-sign-out"></i></a> 
+</div> -->

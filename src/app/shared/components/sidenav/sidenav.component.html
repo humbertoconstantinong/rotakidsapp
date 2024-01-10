@@ -1,0 +1,24 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer opened  #drawer class="example-sidenav mat-elevation-z4" mode="side">
+      <div class="buttons">
+        <button (click)="openComponent('students')" mat-raised-button color="primary">Meus Alunos <mat-icon>face</mat-icon></button>
+        <mat-divider></mat-divider>
+        <button (click)="openComponent('schools')"  mat-raised-button color="primary">Escolas <mat-icon>school</mat-icon></button>
+        <mat-divider></mat-divider>
+        <button (click)="openComponent('studentsfeedback')"  mat-raised-button color="primary">Feedback de Alunos <mat-icon>feedback</mat-icon></button>
+        <mat-divider></mat-divider>
+        <button style="background-color:#008000; color: white;" (click)="openComponent('financial')" mat-raised-button color="primary">Financeiro <mat-icon>paid</mat-icon></button>
+        <mat-divider></mat-divider>
+        <img src="https://i.imgur.com/NhKclmb.png" alt="Photo of a Shiba Inu">
+        <button style="background-color:#ff0000; color: white;" (click)="logout()" mat-raised-button color="primary">Sair</button>
+      </div>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <app-students *ngIf="component==='students'"></app-students>
+      <app-schools *ngIf="component==='schools'"></app-schools>
+      <app-financial *ngIf="component==='financial'"></app-financial>
+      <app-student-feedback *ngIf="component==='studentsfeedback'"></app-student-feedback>
+    </div>
+  
+  </mat-drawer-container>

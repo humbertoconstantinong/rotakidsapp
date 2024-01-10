@@ -1,0 +1,62 @@
+.btn-entrar{
+    color: white;
+}
+.btn-olho{
+    color: white;
+}
+
+mat-card{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    
+    align-items: center;
+
+    
+        img{
+            margin-top: 12px;
+            width: 100px;
+            height: 100px;
+            
+        }
+    form{
+        display: flex;
+        flex-direction: column;
+        button{
+            margin-top: 12px;
+            background: linear-gradient(45deg,#FF7043, #F8EFBA, #FFD54F, #FFF176);
+            background-size: 300% 300%;
+            animation: colors 10s ease infinite;
+        }
+    } 
+    
+}
+.container{
+    background: linear-gradient(45deg,#FF7043, #F8EFBA, #FFD54F, #FFF176);
+    animation: colors 10s ease infinite;
+    background-size: 300% 300%;
+    // background-color: #F8EFBA;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+span{
+    text-align: center;
+    color: darkgray;
+    font-size:x-small;
+    cursor: pointer;
+}
+
+@keyframes colors{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}

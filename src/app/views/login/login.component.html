@@ -1,0 +1,33 @@
+<div class="container">
+    <mat-card class="example-card mat-elevation-z8" >
+     
+            <img mat-card-image src="../../../assets/logo.png" >
+           
+       
+        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+        <mat-card-content>
+            <form [formGroup]="userForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>EMAIL</mat-label>
+                    <input formControlName="email" matInput placeholder="Login">
+                    <!-- <mat-hint>Digite seu login</mat-hint> -->
+                  </mat-form-field>
+                  <mat-form-field appearance="outline">
+                    <mat-label>SENHA</mat-label>
+                    <input formControlName="password" matInput [type]="hide ? 'password' : 'text'" placeholder="Senha">
+                    <!-- <mat-hint>Digite sua senha</mat-hint> -->
+                    <button tabindex="-1" #btnOlho mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon class="btn-olho">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                  </mat-form-field>
+                  <span>Esqueci a senha</span>
+                  <mat-progress-bar *ngIf="progress" mode="indeterminate"></mat-progress-bar>
+                  <button (keydown.enter)="loginSubmit()" class="btn-entrar" (click)="loginSubmit()" mat-raised-button>ENTRAR</button>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+           
+        </mat-card-actions>
+    </mat-card>
+</div>
+  

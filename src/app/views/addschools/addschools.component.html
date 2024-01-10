@@ -1,0 +1,25 @@
+<mat-card>
+  <form [formGroup]="schoolForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="Nome da Escola" formControlName="name" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Rua</mat-label>
+        <input matInput placeholder="Rua" formControlName="street" required>
+      </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Numero</mat-label>
+        <input matInput placeholder="numero" formControlName="number" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Bairro</mat-label>
+        <input matInput placeholder="bairro" formControlName="neighborhood" required>
+      </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Cidade</mat-label>
+        <input matInput placeholder="Cidade" formControlName="city" required>
+      </mat-form-field>
+      <button (click)="saveSchool()" style="background-color:#FFD54F; color: white;" mat-button>Adicionar Escola</button>
+</form>
+    </mat-card>

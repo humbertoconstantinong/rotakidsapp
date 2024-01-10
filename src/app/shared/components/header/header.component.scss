@@ -1,0 +1,125 @@
+.menu{
+  color: white;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  mat-toolbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    background: linear-gradient(45deg,#F8EFBA, #FFD54F, #FFF176);
+    animation: colors 10s ease infinite;
+    background-size: 300% 300%;
+
+    @keyframes colors{
+      0%{
+          background-position: 0% 50%;
+      }
+      50%{
+          background-position: 100% 50%;
+      }
+      100%{
+          background-position: 0% 50%;
+      }
+  }
+  img{
+    width: 45px;
+    height: 45px;
+  }
+
+  @media (max-width: 375px){
+    img{
+      width: 45px;
+      height: 45px;
+    }
+}
+  
+  }
+  mat-drawer{
+    display: flex;
+      img{
+        height: 200px;
+        width: 200px;
+        margin-top: 100px;
+        cursor: pointer;
+      }
+    
+      .buttons{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    
+      }
+      button{
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+      mat-divider{
+        width: 100%;
+      }
+    
+      width: 250px;
+      @keyframes colors{
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+        100%{
+            background-position: 0% 50%;
+        }
+    }
+    background: linear-gradient(45deg, #F8EFBA, #FFD54F, #FFF176);
+        animation: colors 10s ease infinite;
+        background-size: 300% 300%;
+    }
+    
+    .example-container {
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+      }
+      
+      
+      .example-sidenav {
+        padding: 20px;
+      }
+      
+      .content {
+        height: 100%;
+        width: 100%;
+      }
+      
+.icon-bar {
+  width: 100%;
+  background: linear-gradient(45deg, #F8EFBA, #FFD54F, #FFF176);
+  animation: colors 10s ease infinite;
+  background-size: 300% 300%;
+  overflow: auto;
+  position: fixed;
+  bottom: 0;
+}
+
+.icon-bar a {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+// .icon-bar a:hover {
+//   background-color: white;
+//   i{
+//     color: #FFF176;
+//   }
+// }
+
+.active {
+  background-color: #6bf3c1;
+}

@@ -1,0 +1,122 @@
+<mat-card class="container">
+      <mat-stepper  [linear]="true" #stepper>
+        <mat-step [stepControl]="studentForm">
+          <form [formGroup]="studentForm">
+            <ng-template matStepLabel>Dados do aluno</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Nome</mat-label>
+              <input matInput placeholder="Nome" formControlName="name" required>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Sobrenome</mat-label>
+              <input matInput placeholder="Sobrenome" formControlName="last_name" required>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Gênero</mat-label>
+              <mat-select formControlName="gender">
+                <mat-option value="M">Masculino</mat-option>
+                <mat-option value="F">Feminino</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Escola</mat-label>
+                <mat-select formControlName="escolaId" required>
+                  <mat-option *ngFor="let item of schools" [value]="item.id">
+                    {{item.name}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Turno</mat-label>
+              <mat-select formControlName="turn">
+                <mat-option value="M">Manhã</mat-option>
+                <mat-option value="T">Tarde</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Idade</mat-label>
+              <input  matInput placeholder="Idade" formControlName="age" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>CEP</mat-label>
+              <input mask="00000-000"  (blur)="getAdress(studentForm.value.zip_code)" required formControlName="zip_code" matInput #postalCode maxlength="9"  placeholder="Ex. 55555-555">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Rua</mat-label>
+              <input matInput placeholder="Rua" formControlName="street" required>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Bairro</mat-label>
+              <input matInput placeholder="Bairro" formControlName="neighborhood" required>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Cidade</mat-label>
+              <input matInput placeholder="Cidade" formControlName="city" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Número</mat-label>
+              <input required formControlName="number" matInput #postalCode maxlength="4"  placeholder="Número">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Complemento</mat-label>
+              <input matInput placeholder="Complemento" formControlName="complement">
+            </mat-form-field>
+            <!-- <mat-form-field appearance="fill">
+              <mat-label>Preço do aluno</mat-label>
+              <input type="number" matInput placeholder="Preço" formControlName="price">
+            </mat-form-field> -->
+        <mat-form-field appearance="fill">
+          <mat-label>CPF do Responsável</mat-label>
+          <input (blur)="getParentForDocumentNumber(studentForm.value.parent_document_number)" mask="000-000-000-00" matInput formControlName="parent_document_number" placeholder="CPF"
+                 required>
+        </mat-form-field>
+        <mat-label>Imagem do aluno(a)</mat-label>
+        <input style="margin-left: 1rem; margin-bottom: 1rem;" type="file" (change)="onFileChange($event)" placeholder="Foto do aluno(a)" formControlName="image" required>
+            <div>
+              <button style="background-color:#FFD54F;" mat-button matStepperNext>Seguinte</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="parentForm" label="Dados do responsável">
+          <form [formGroup]="parentForm">
+            <mat-form-field appearance="fill">
+              <mat-label>Nome do Responsável</mat-label>
+              <input matInput formControlName="name" placeholder="Primeiro nome"
+                     required>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Sobrenome do Responsável</mat-label>
+              <input matInput formControlName="last_name" placeholder="Segundo nome"
+                     required>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>CPF do Responsável</mat-label>
+              <input mask="000-000-000-00" matInput formControlName="document_number" placeholder="CPF"
+                     required>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Telefone do responsável</mat-label>
+              <input mask="(00)00000-0000"  matInput formControlName="phone" placeholder="Telefone"
+                     required>
+            </mat-form-field>
+            <div>
+              <button style="background-color:#FFD54F;" mat-button matStepperPrevious>Voltar</button>
+              <button style="background-color:#FFD54F;" mat-button matStepperNext>Seguinte</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Confirmar dados</ng-template>
+          <mat-card class="studentData">
+
+            <h1 style="text-align:center ;">Confirme os dados antes de inserir</h1> 
+              <div class="endButtons">
+                <button style="background-color:#FFD54F;" mat-button matStepperPrevious>Voltar</button>
+                <span class="example-spacer"></span>
+                <button (click)="createParent()" mat-mini-fab color="primary"> <mat-icon>done</mat-icon></button>
+              </div>
+          </mat-card>
+          </mat-step>
+        </mat-stepper>
+        
+</mat-card>
