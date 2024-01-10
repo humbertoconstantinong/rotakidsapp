@@ -1,27 +1,51 @@
-# Euchegueimamae
+# Sistema de Gestão para Condutores Escolares
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+## Descrição do Projeto
 
-## Development server
+Este projeto consiste em um sistema de gestão para condutores escolares, proporcionando uma maneira eficiente de cadastrar alunos e escolas associadas. A principal funcionalidade é a adição de alunos, que requer o cadastro prévio de pelo menos uma escola. Os dados solicitados durante o cadastro de alunos incluem nome, sobrenome, turno, sexo, endereço com CEP, telefone e CPF do responsável.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Além disso, o sistema permite o cadastro de escolas, solicitando informações básicas como nome e endereço. Após adicionar um aluno, o usuário é redirecionado para a lista de alunos cadastrados. Ao clicar no botão "Ir até", é aberto o aplicativo Waze com uma rota predefinida para a residência do aluno. Isso visa facilitar o deslocamento e evitar esquecimentos.
 
-## Code scaffolding
+## Funcionalidades Principais
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Cadastro de Alunos:**
+   - Nome
+   - Sobrenome
+   - Turno
+   - Sexo
+   - Endereço com CEP
+   - Telefone
+   - CPF do responsável
 
-## Build
+2. **Cadastro de Escolas:**
+   - Nome da escola
+   - Endereço da escola
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. **Navegação Automática:**
+   - Ao adicionar um aluno, é possível clicar no botão "Ir até" para abrir o Waze com uma rota predefinida até a residência do aluno.
 
-## Running unit tests
+## Como Utilizar
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. **Cadastro de Escolas:**
+   - Acesse a aba de "Cadastro de Escolas".
+   - Preencha as informações solicitadas, incluindo o nome e endereço da escola.
+   - Clique em "Salvar".
 
-## Running end-to-end tests
+2. **Cadastro de Alunos:**
+   - Certifique-se de ter cadastrado pelo menos uma escola.
+   - Acesse a aba de "Cadastro de Alunos".
+   - Preencha os dados do aluno conforme solicitado.
+   - Clique em "Adicionar Aluno".
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. **Navegação até a Residência do Aluno:**
+   - Após adicionar um aluno, vá para a lista de alunos cadastrados.
+   - Clique no botão "Ir até" ao lado do aluno desejado.
+   - Será aberto o Waze com uma rota predefinida até a residência do aluno.
 
-## Further help
+## Contribuições
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Contribuições são bem-vindas! Caso identifique bugs, problemas ou tenha sugestões de melhorias, sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
+
+## Licença
+
+Este projeto é licenciado sob a [Licença MIT](LICENSE).
