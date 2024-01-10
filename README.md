@@ -49,3 +49,7 @@ Contribuições são bem-vindas! Caso identifique bugs, problemas ou tenha suges
 ## Licença
 
 Este projeto é licenciado sob a [Licença MIT](LICENSE).
+
+## Funcionamento
+
+Video demonstrando as funcionalidades -> https://www.youtube.com/watch?v=oOyAyMXymik
